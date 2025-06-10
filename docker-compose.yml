@@ -1,0 +1,20 @@
+services:
+  backend:
+    build: ./Back_End
+    image: my-backend
+    ports:
+      - "8000:8000"
+      - "443:8000"  
+    volumes:
+      - ./Back_End:/app
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+  frontend:
+    build: ./Front_End
+    image: my-frontend
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Front_End:/usr/share/nginx/html
+    depends_on:
+      - backend

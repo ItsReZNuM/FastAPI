@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت درس</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-blue-900 text-white min-h-screen flex items-center justify-center">
+    <div class="container mx-auto p-8 max-w-2xl">
+        <h1 class="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
+            ثبت درس
+        </h1>
+        <div class="bg-gray-800 bg-opacity-80 backdrop-blur-lg p-8 rounded-xl shadow-xl">
+            <form id="course-form" class="space-y-4">
+                <input type="text" name="course_name" placeholder="نام درس" class="w-full p-3 bg-gray-700 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500" required>
+                <input type="number" name="units" placeholder="تعداد واحد" class="w-full p-3 bg-gray-700 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500" required>
+                <select name="department" class="w-full p-3 bg-gray-700 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500">
+                    <option value="فنی مهندسی">فنی مهندسی</option>
+                    <option value="علوم پایه">علوم پایه</option>
+                    <option value="اقتصاد">اقتصاد</option>
+                </select>
+                <input type="text" name="teacher_id" placeholder="کد استادی" class="w-full p-3 bg-gray-700 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500" required>
+                <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">ثبت درس</button>
+            </form>
+        </div>
+        <div id="notification" class="hidden fixed top-4 right-4 bg-green-500 text-white p-4 rounded-lg shadow-lg">
+            <span id="notification-message"></span>
+            <div id="progress-bar" class="h-1 bg-white mt-2"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

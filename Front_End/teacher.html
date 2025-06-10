@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت استاد</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gradient-to-br from-gray-900 to-blue-900 text-white min-h-screen flex items-center justify-center">
+    <div class="container mx-auto p-8 max-w-2xl">
+        <h1
+            class="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
+            ثبت استاد
+        </h1>
+        <div class="bg-gray-800 bg-opacity-80 backdrop-blur-lg p-8 rounded-xl shadow-xl">
+            <form id="teacher-form" class="space-y-4">
+                <input type="text" name="teacher_fname" placeholder="نام"
+                    class="w-full p-3 bg-gray-700 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500" required>
+                <input type="text" name="teacher_lname" placeholder="نام خانوادگی"
+                    class="w-full p-3 bg-gray-700 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500" required>
+                <input type="text" name="father" placeholder="نام پدر"
+                    class="w-full p-3 bg-gray-700 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500" required>
+                <input type="text" name="IDS" placeholder="سریال شناسنامه"
+                    class="w-full p-3 bg-gray-700 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500" required>
+                <select name="BornCity"
+                    class="city-select w-full p-3 bg-gray-700 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500">
+                    <option value="تهران">تهران</option>
+                    <option value="اصفهان">اصفهان</option>
+                    <option value="شیراز">شیراز</option>
+                    <option value="مشهد">مشهد</option>
+                    <option value="تبریز">تبریز</option>
+                    <option value="کرج">کرج</option>
+                    <option value="اهواز">اهواز</option>
+                    <option value="قم">قم</option>
+                    <option value="کرمانشاه">کرمانشاه</option>
+                    <option value="ارومیه">ارومیه</option>
+                    <option value="رشت">رشت</option>
+                    <option value="زاهدان">زاهدان</option>
+                    <option value="همدان">همدان</option>
+                    <option value="کرمان">کرمان</option>
+                    <option value="یزد">یزد</option>
+                    <option value="اردبیل">اردبیل</option>
+                    <option value="بندرعباس">بندرعباس</option>
+                    <option value="اراک">اراک</option>
+                    <option value="ایلام">ایلام</option>
+                    <option value="بوشهر">بوشهر</option>
+                    <option value="شهرکرد">شهرکرد</option>
+                    <option value="بیرجند">بیرجند</option>
+                    <option value="ساری">ساری</option>
+                    <option value="گرگان">گرگان</option>
+                    <option value="خرم‌آباد">خرم‌آباد</option>
+                    <option value="سنندج">سنندج</option>
+                    <option value="یاسوج">یاسوج</option>
+                    <option value="زنجان">زنجان</option>
+                    <option value="قزوین">قزوین</option>
+                    <option value="بجنورد">بجنورد</option>
+                    <option value="سمنان">سمنان</option>
+                </select>
+                <input type="text" name="Address" placeholder="آدرس"
+                    class="w-full p-3 bg-gray-700 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500" required>
+                <input type="text" name="PostalCode" placeholder="کد پستی"
+                    class="w-full p-3 bg-gray-700 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500" required>
+                <input type="text" name="HPhone" placeholder="تلفن ثابت"
+                    class="w-full p-3 bg-gray-700 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500" required>
+                <select name="Department"
+                    class="w-full p-3 bg-gray-700 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500">
+                    <option value="فنی مهندسی">فنی مهندسی</option>
+                    <option value="علوم پایه">علوم پایه</option>
+                    <option value="اقتصاد">اقتصاد</option>
+                </select>
+                <input type="text" name="national_id" placeholder="کدملی"
+                    class="w-full p-3 bg-gray-700 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500" required>
+                <input type="text" name="birth_date" placeholder="تاریخ تولد (yyyy/mm/dd)"
+                    class="w-full p-3 bg-gray-700 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500" required>
+                <button type="submit"
+                    class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">ثبت
+                    استاد</button>
+            </form>
+        </div>
+        <div id="notification" class="hidden fixed top-4 right-4 bg-green-500 text-white p-4 rounded-lg shadow-lg">
+            <span id="notification-message"></span>
+            <div id="progress-bar" class="h-1 bg-white mt-2"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
